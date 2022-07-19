@@ -1,0 +1,31 @@
+<footer><!--footer-->
+  <div class="container">
+        <div class="row">
+          <ul class="list-unstyled text-right">
+            <li class="col-sm-4 col-xs-6">
+              <a href="#">About</a>
+            </li>
+          </ul>
+        </div><!--/row-->
+    </div><!--/container-->
+</footer>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-12626016-2', 'auto');
+  if (window.location.search != '') {
+    //set results
+    var dimensionValue = searchresults_count;
+    ga('set', 'dimension2', dimensionValue);
+
+    var metricValue = searchresults_count;
+    ga('set', 'metric1', metricValue);
+  }
+
+  ga('send', 'pageview');
+
+</script>

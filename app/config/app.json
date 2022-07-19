@@ -1,0 +1,16 @@
+{
+    "default": {
+        "items_per_page": 24,
+        "elasticsearch_index": "sailusfood",
+        "elasticsearch_log": null
+    },
+
+    "development": {
+        "elasticsearch_host": "localhost:9200",
+        "elasticsearch_log": "trace"
+    },
+
+    "production": {
+        "elasticsearch_host": "10.240.0.2:80/elasticsearch"
+    }
+}

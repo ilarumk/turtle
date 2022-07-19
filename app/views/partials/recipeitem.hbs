@@ -1,0 +1,28 @@
+<div class="m-t p-b recipe-item">
+  <div class="row">
+    <div class="col-xs-6 col-md-2 col-lg-1">
+       <a class="{{this._source.permalink}}" href="#">
+        <img class="media-object" src="{{this._source.image-small}}" width="150" alt="{{this._source.title}}">
+      </a>
+    </a>
+    </div>
+    <div class="col-xs-6 col-md-10 col-lg-11 recipe-rhs">
+      <div class="row">
+        <div class="col-xs-12">
+            <h4 class="media-heading"><a href="{{this._source.permalink}}">{{this._source.title}}</a></h4>
+        </div>
+        <div class="col-xs-12">
+
+            {{#if this._source.main-ingredient}}<div class="row"><div class="col-xs-12"><i class="fa fa-list"></i><span class="m-a-0 p-l">{{#each this._source.main-ingredient}}{{#if @index}}, {{/if}}{{this}}{{/each}}</span></div></div>{{/if}}
+            
+            {{#if this._source.minutes}}<div class="row"><div class="col-xs-12"><i class="fa fa-clock-o"></i><span class="time p-l">{{this._source.cook-time}} minutes</span></div></div>{{/if}}
+
+            {{#if this._source.special-diet}}<div class="row"><div class="col-xs-12"><i class="fa fa-leaf"></i><span class="m-a-0 p-l">{{#each this._source.special-diet}}{{#if @index}}, {{/if}}{{this}}{{/each}}</span></div></div>{{/if}}
+            
+            {{#if this._source.style}}<div class="row"><div class="col-xs-12"><i class="fa fa-cutlery"></i><span class="m-a-0 p-l">{{#each this._source.style}}{{#if @index}}, {{/if}}{{this}}{{/each}}</span></div></div>{{/if}} 
+        </div>
+    </div>
+  </div>
+  </div>
+
+</div>

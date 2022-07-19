@@ -1,0 +1,48 @@
+  <div class="container-fluid">
+    <div class="row" id="results">
+        <div class="col-xs-12">
+
+          <div class="content-ad-top text-center">
+              <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+              <!-- 1-LEADERBOARD-RESPONSIVE -->
+              <ins class="adsbygoogle"
+                   style="display:block"
+                   data-ad-client="ca-pub-5906088379535408"
+                   data-ad-slot="3585418669"
+                   data-ad-format="auto"></ins>
+              <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
+         </div>
+
+        {{#if results}}
+            {{#each results}}
+              <div class="row">
+                  <div class="col-lg-12 col-md-12">
+                      {{> lrec}}
+                      {{> recipeitem}}
+                  </div>
+              </div>
+            {{/each}}
+
+            {{#if results}}
+              {{> pagination}}
+            {{/if}}
+        {{else}}
+          {{#if query}}
+              <p>There are no results for your query, please try another keyword</p>
+          {{/if}}
+        {{/if}}
+      </div>
+    </div>
+</div>
+<script>
+$(document).ready(function() {
+  $("#results a").click(function() {
+    //Do stuff when clicked
+      url = $(this).attr("href");
+      trackOutboundLink(url);
+  });
+});
+var searchresults_count = '{{total}}';
+</script>
